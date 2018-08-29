@@ -1,0 +1,12 @@
+partial modifier_keys
+xkb_symbols "swapkeys" {
+  replace key <CAPS> { [ Control_L ] };
+  replace key <LCTL> { [ Caps_Lock ] };
+  replace key <HZTG> { [ Alt_L ] };
+  replace key <LALT> { [ Zenkaku_Hankaku ] };
+  replace key <RTRN> { [ Alt_R ] };
+  replace key <HENK> { [ Return ] };
+  replace key <RALT> { [ Henkan ] };
+  replace key <HKTG> { [ BackSpace ] };
+  replace key <BKSP> { [ Hiragana_Katakana ] };
+};
