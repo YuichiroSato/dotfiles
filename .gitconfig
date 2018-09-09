@@ -1,0 +1,53 @@
+[user]
+  email = sato.yu1ro@gmail.com
+  name = YuichiroSato
+[credential]
+  helper = cache --timeout=86400
+[alias]
+  add1 = "!sh -c 'git add $(git status | grep modified: | head -n 1 | cut -f 2 -d \":\" | tr -d \" \")'"
+  add2 = "!sh -c 'git add $(git status | grep modified: | head -n 2 | cut -f 2 -d \":\" | tr -d \" \")'"
+  add3 = "!sh -c 'git add $(git status | grep modified: | head -n 3 | cut -f 2 -d \":\" | tr -d \" \")'"
+  add4 = "!sh -c 'git add $(git status | grep modified: | head -n 4 | cut -f 2 -d \":\" | tr -d \" \")'"
+  add5 = "!sh -c 'git add $(git status | grep modified: | head -n 5 | cut -f 2 -d \":\" | tr -d \" \")'"
+  ap = commit -v --amend
+  br = branch
+  cm = commit -v
+  cma = commit -v -a
+  cmd = !git add . && git commit -v
+  co = checkout
+  co1 = "!sh -c 'git checkout $(git status | grep modified: | head -n 1 | cut -f 2 -d \":\" | tr -d \" \")'"
+  cp = checkout -p
+  d = diff
+  dc = diff --cached
+  dn = diff --name-only
+  ds = diff --stat
+  f = fetch
+  flog = "!sh -c 'git log -p $(git ls-files | fzy)'"
+  g = log --graph --abbrev-commit --pretty=oneline --decorate
+  ga = log --graph --abbrev-commit --pretty=oneline --decorate --all
+  l = log
+  rc = rebase --continue
+  re = rebase
+  s = status
+  sh = show
+  ss = show --stat
+  s1 = show HEAD~1
+  s2 = show HEAD~2
+  s3 = show HEAD~3
+  s4 = show HEAD~4
+  s5 = show HEAD~5
+  s6 = show HEAD~6
+  s7 = show HEAD~7
+  s8 = show HEAD~8
+  s9 = show HEAD~9
+  undo = !git reset --soft HEAD^ && git reset
+[push]
+  default = simple
+[gui]
+  encoding = utf-8
+[core]
+  autocrlf = input
+  editor = vim
+  ignorecase = false
+  quotepath = false
+  whitespace = cr-at-eol
