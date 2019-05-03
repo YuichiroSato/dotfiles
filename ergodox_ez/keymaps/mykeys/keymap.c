@@ -96,8 +96,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                            KC_TRNS,
                                                            KC_TRNS,        KC_TRNS,        KC_TRNS,
   // right hand
-  KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_F11,
-  KC_TRNS, LSFT(KC_COMM),  LSFT(KC_DOT),   LSFT(KC_4),     LSFT(KC_RO),    KC_NO,          KC_F12,
+  KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
+  KC_TRNS, LSFT(KC_COMM),  LSFT(KC_DOT),   LSFT(KC_4),     LSFT(KC_RO),    KC_NO,          KC_TRNS,
            KC_MINS,        LSFT(KC_MINS),  LSFT(JP_COLN),  LSFT(KC_SCLN),  KC_SLSH,        KC_TRNS,
   KC_TRNS, LSFT(KC_JYEN),  LSFT(KC_6),     LSFT(KC_3),     LSFT(KC_5),     JP_AT,          KC_TRNS,
   KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |         |  1   |  2   |   3  |   4  |   5  |------|           |------|   6  |   7  |   8  |   9  |   0  |        |
  * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |         |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |         |      |      |      |   (  |   )  |      |           |      |   -  |   =  |   *  |   +  |   /  |        |
  * `---------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |       |      |      |      |      |                                       |      |      |      |      |      |
  *   `-----------------------------------'                                       `----------------------------------'
@@ -128,23 +128,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [NUMB] = LAYOUT_ergodox(
   // left hand
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-  KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_TRNS,
-  KC_TRNS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,
-  KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_TRNS,
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                               KC_TRNS, KC_TRNS,
-                                                        KC_TRNS,
-                                      KC_TRNS, KC_TRNS, KC_TRNS,
+  KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
+  KC_TRNS, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRNS,
+  KC_TRNS, KC_1,           KC_2,           KC_3,           KC_4,           KC_5,
+  KC_TRNS, KC_NO,          KC_NO,          KC_NO,          LSFT(KC_8),     LSFT(KC_9),     KC_TRNS,
+  KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
+                                                                           KC_TRNS,        KC_TRNS,
+                                                                                           KC_TRNS,
+                                                           KC_TRNS,        KC_TRNS,        KC_TRNS,
   // right hand
-  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F12,
-  KC_TRNS, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
-           KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_TRNS,
-  KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_TRNS,
-                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+  KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_F12,
+  KC_TRNS, KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
+           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRNS,
+  KC_TRNS, KC_MINS,        LSFT(KC_MINS),  LSFT(JP_COLN),  LSFT(KC_SCLN),  KC_SLSH,        KC_TRNS,
+  KC_TRNS, KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
   KC_TRNS, KC_TRNS,
   KC_TRNS,
-  KC_TRNS, KC_TRNS, KC_TRNS
+  KC_TRNS, KC_TRNS,        KC_TRNS
 ),
 /* Keymap 3: Media and mouse keyS
  *
