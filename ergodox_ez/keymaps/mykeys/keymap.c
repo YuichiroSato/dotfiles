@@ -26,13 +26,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | SftIns |  L1  |  L2  |  L3  |      |      |      |           |      |      |      |      |      |      | Delete |
+ * | SftIns |  L1  |  L2  |  L3  |      |      | CTLC |           | CTLX |      |      |      |      |      | Delete |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Gui    |  :   |   ,  |   .  |   P  |   Y  |      |           |      |   F  |   G  |   C  |   R  |   L  | Esc    |
+ * | Gui    |  :   |   ,  |   .  |   P  |   Y  | LCTL |           | RCTL |   F  |   G  |   C  |   R  |   L  | Esc    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | Alt    |A/Ctrl|O/Shft| E/L2 | U/L1 |   I  |------|           |------|   D  | H/L1 | T/L2 |N/Shft|S/Ctrl| Alt    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | ZKHK   |  ;   |  Q   |   J  |   Z  |   X  |      |           |      |   B  |   M  |   W  |   V  |   Z  | MHEN   |
+ * | ZKHK   |  ;   |  Q   |   J  |   Z  |   X  | LSFT |           | RSFT |   B  |   M  |   W  |   V  |   Z  | MHEN   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      | END  | PgUp |PgDown| HOME |                                       | Left | Down |  Up  | Right|      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -46,20 +46,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [BASE] = LAYOUT_ergodox(
   // left hand
-  LSFT(KC_INS), TG(SYMB),       TG(NUMB),       TG(MDIA),         KC_NO,          KC_NO,          KC_NO,
-  KC_LGUI,      JP_COLN,        KC_COMM,        KC_DOT,           KC_P,           KC_Y,           KC_NO,
+  LSFT(KC_INS), TG(SYMB),       TG(NUMB),       TG(MDIA),         KC_NO,          KC_NO,          LCTL(KC_C),
+  KC_LGUI,      JP_COLN,        KC_COMM,        KC_DOT,           KC_P,           KC_Y,           KC_LCTL,
   KC_LALT,      CTL_T(KC_A),    SFT_T(KC_O),    LT(NUMB, KC_E),   LT(SYMB, KC_U), KC_I,
-  KC_ZKHK,      KC_SCLN,        KC_Q,           KC_J,             KC_K,           KC_X,           KC_NO,
+  KC_ZKHK,      KC_SCLN,        KC_Q,           KC_J,             KC_K,           KC_X,           KC_LSFT,
   KC_NO,        KC_END,         KC_PGUP,        KC_PGDN,          KC_HOME,
                                                                                   KC_PSCR,        KC_NO,
                                                                                                   KC_NO,
                                                                   KC_SPC,         KC_TAB,         KC_NO,
   // right hand
-  KC_NO,        KC_NO,          KC_NO,          KC_NO,            KC_NO,          KC_NO,          KC_DEL,
-  KC_NO,        KC_F,           KC_G,           KC_C,             KC_R,           KC_L,           KC_ESC,
+  RCTL(KC_X),   KC_NO,          KC_NO,          KC_NO,            KC_NO,          KC_NO,          KC_DEL,
+  KC_RCTL,      KC_F,           KC_G,           KC_C,             KC_R,           KC_L,           KC_ESC,
                 KC_D,           LT(SYMB, KC_H), LT(NUMB, KC_T),   SFT_T(KC_N),    CTL_T(KC_S),    KC_RALT,
-  KC_NO,        KC_B,           KC_M,           KC_W,             KC_V,           KC_Z,           KC_MHEN,
-                                KC_LEFT,        KC_DOWN,          KC_UP,          KC_RGHT,        KC_NO,
+  KC_RSFT,      KC_B,           KC_M,           KC_W,             KC_V,           KC_Z,           KC_MHEN,
+                                KC_LEFT,        KC_DOWN,        KC_UP,            KC_RGHT,        KC_NO,
   KC_NO,        KC_INS,
   KC_NO,
   KC_NO,        KC_ENT,  KC_BSPC
