@@ -8,9 +8,15 @@
   a2 = "!sh -c 'git add $(git status | grep modified: | head -n 2 | tail -n 1 | cut -f 2 -d \":\" | tr -d \" \")'"
   a3 = "!sh -c 'git add $(git status | grep modified: | head -n 3 | tail -n 1 | cut -f 2 -d \":\" | tr -d \" \")'"
   a4 = "!sh -c 'git add $(git status | grep modified: | head -n 4 | tail -n 1 | cut -f 2 -d \":\" | tr -d \" \")'"
-  a5 = "!sh -c 'git add $(git status | grep modified: | head -n 5 | tali -n 1 | cut -f 2 -d \":\" | tr -d \" \")'"
+  a5 = "!sh -c 'git add $(git status | grep modified: | head -n 5 | tail -n 1 | cut -f 2 -d \":\" | tr -d \" \")'"
   ap = commit -v --amend
   br = branch
+  bn = "!sh -c 'git branch --format=\"%(refname:short)\" | cat -n'"
+  br1 = "!sh -c 'git checkout $(git branch --format=\"%(refname:short)\" | head -n 1)'"
+  br2 = "!sh -c 'git checkout $(git branch --format=\"%(refname:short)\" | head -n 2 | tail -n 1)'"
+  br3 = "!sh -c 'git checkout $(git branch --format=\"%(refname:short)\" | head -n 3 | tail -n 1)'"
+  br4 = "!sh -c 'git checkout $(git branch --format=\"%(refname:short)\" | head -n 4 | tail -n 1)'"
+  br5 = "!sh -c 'git checkout $(git branch --format=\"%(refname:short)\" | head -n 5 | tail -n 1)'"
   cm = commit -v
   cma = commit -v -a
   cmd = !git add . && git commit -v
